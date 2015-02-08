@@ -91,7 +91,7 @@ z-index:10;
 	display:block;
 	z-index:100;
 	width:100%;	
-	font-size:20px;
+	font-size:30px;
   }
   
   .menu .buttonMenu{
@@ -136,6 +136,13 @@ z-index:10;
   }
   
   .sub-item{
+	
+  }
+  
+  .list-group-item{
+	display:block!important;
+  }
+  .list-group-item .menuItem{
 	
   }
   
@@ -349,7 +356,15 @@ function toggleDisplayMenu(){
 		<div class="menu">
 			<button class="buttonMenu" type="button" OnClick="toggleDisplayMenu();"><i class="fa fa-align-justify fa-fw"></i></button>
 				<!--div class="menu"--> 
+				
 				<div class="list-group hidden" id="listMenuItem">
+				
+				<div class="list-group-item sub-item hidden">
+					<a class="menuItem" onClick="javascript:scrolltotop();" href="javascript:scrolltotop()" ><i class="fa fa-arrow-up"></i>&nbsp; Top</a> 
+					<a class="menuItem" href="lmsecurite2.html"><i class="fa fa-home fa-fw"></i>&nbsp; Accueil</a> 
+					<a class="menuItem" href="contact.htm"><i class="fa fa-envelope"></i>&nbsp; Contacts/Devis</a> 
+				</div>
+				
 				  <div class="fondVert">
 					  <div class="fond">
 					  <a class="list-group-item fondVert" href="equipement%20%20urbain.htm"><i class="fa fa-bus fa-fw"></i>&nbsp; Equipement Urbain</a>
