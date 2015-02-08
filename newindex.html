@@ -1,0 +1,411 @@
+<html lang="fr">
+<head>
+<link rel="stylesheet" href="menu.css" type="text/css" media="all" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<base target="contentIframe">	
+<style type="text/css">
+
+.listMenuitem{
+text-align: center;
+display: inline-block;
+vertical-align: middle;
+position: relative;
+top: 40%;
+width: 100%;
+
+}
+
+body{
+ background-color:#F2F5A9;
+}
+
+
+.fondVert{
+background-color : #008000;
+}
+
+.fondOrange{
+background-color : #ff6600;
+}
+
+.fondBleu{
+background-color : #0000ff;
+}
+
+.fondBleuGris{
+background-color : #046c87;
+}
+
+.small{
+height:50px !important;
+font-size:18px;
+}
+
+.content{
+height:100%;
+width:1100px;
+margin-left:auto;
+margin-right:auto;
+margin-top:150px;
+z-index:1;
+}
+
+.centerNav{
+border:0;
+margin-left:10px;
+height:100%;
+}
+
+.header{
+height:100px;
+width:100%;
+background-color:yellow;
+position: fixed;
+margin:0;
+padding:0;
+top:0;
+left:0;
+box-shadow:0 0 10px rgba(0,0,0,0.7);
+transition: height 500ms, background 500ms, font-size 500ms;
+z-index:10;
+}
+
+
+@media screen and (max-device-width : 320px){
+	.content{
+		width:320px !important;
+	}
+	.centerNav{
+		width:320px !important;
+  }
+}
+
+
+@media screen and (max-width : 768px){
+  .menu{
+	display:block;
+	z-index:100;
+	width:100%;	
+	right:2px;
+	top:5px;
+	font-size:20px;
+	position:fixed;
+  }
+  
+  .menu .buttonMenu{
+	font-size:30px;	
+	background-color:inherit;
+	border:0;
+	float:right;
+	right-50px;
+	margin:0;
+	z-index:100;
+  }
+  
+   .menu .list-group{
+	float:right;
+	position: absolute;
+	margin-right: 50px;
+  }
+  
+  .menuItem{
+	margin-right:5%;
+  }
+  
+  .headerContent{
+  background-size: 80% 80% !important;
+  }
+  
+  .listMenuitem{
+	display:none;
+  }
+  
+  .content{
+		width:100%;
+		margin-top:80px;
+  }
+  
+  .centerNav{
+		width:100%;
+		overflow:scroll;
+  }
+  
+  .header{
+	height:50px;
+  }
+  
+  .sub-item{
+	display:none!important;;
+  }
+  
+}
+
+@media screen and (min-width : 768px){
+	.header{
+	font-size:20px;
+	}
+  .menuItem{
+	margin-right:8%;
+	
+  }
+  .headerContent{
+	background-size: 30% 70% !important;
+  }
+  .listMenuitem{
+	margin-left:15%;
+  }	
+  
+   .menu{
+	width:200px;
+	font-size:15px;
+   }
+  
+   .menu .list-group{
+	display:block;
+  }
+  
+  .buttonMenu{
+	display:none;
+  }
+  
+  .centerNav{
+		width:620px;
+  }
+}
+
+@media screen and (max-width : 900px){
+
+  .list-group-item{
+		padding: 10px 15px;
+  }
+  
+  .sub-item{
+	padding-left:40px;
+	font-size : 0.8em;
+	}
+}
+
+@media screen and (min-width : 910px)
+{
+  .header
+  {
+    font-size:20px;
+  }
+  
+  .centerNav{
+		width:820px;
+		overflow:hidden;
+  }
+  
+  .list-group-item{
+		padding: 10px 15px;
+  }
+  
+  .sub-item{
+	padding-left:40px;
+	font-size : 0.8em;
+	}
+}
+
+
+  
+.headerContent{
+background : url(lm.jpg) no-repeat;
+transition: height 500ms, background 500ms;
+background-position: 0 50%;
+width:100%;
+height:100%;
+margin: 0 auto;
+max-width:1100px;
+margin-top:auto;
+}
+
+.menu{
+float:left;
+//background-color:yellow;
+}
+
+.sub-item:hover{
+#background-color: inherit;
+#color:white !important;
+}
+
+.sub-item:hover a{
+color:white !important;
+}
+
+.list-group-item:first-child {
+border-top-right-radius: 4px;
+border-top-left-radius: 4px;
+padding: 10px 15px;
+}
+.list-group-item {
+position: relative;
+display: block;
+
+margin-bottom: -1px;
+#background-color: #ffffff;
+border: 1px solid #dddddd;
+color:white;
+}
+
+a{
+color: #555555;
+text-decoration: none;
+}
+
+a.list-group-item:hover, a.list-group-item:focus {
+text-decoration: none;
+#color: #555555;
+}
+
+.sub-item a:hover{
+text-decoration: underline;
+
+}
+
+.fond{
+background-color: #f5f5f5;
+}
+.fond:hover{
+background-color: inherit;
+}
+.fond:hover a{
+color:white!important;
+}
+.list-group{
+#background-color: #f5f5f5;
+}
+
+.hidden{
+display:none ;
+}
+
+</style>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+this.frames["gauche"] = 1;
+this.frames["en_tete"] = 1;
+function resizeIframe(obj) {
+obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+//obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
+}
+
+$(window).scroll(function(){
+    if($(document).scrollTop() > 100) {
+        $('#header').addClass('small');
+		$('#listMenuitem').addClass('small');
+		
+    } else {
+        $('#header').removeClass('small');
+		$('#listMenuitem').removeClass('small');
+    }
+});
+
+function scrolltotop() {
+	window.scrollTo(0,0);
+}
+
+function toggleDisplayMenu(){
+	if($('#listMenuItem').hasClass( 'hidden' ))
+		$('#listMenuItem').removeClass('hidden');
+	else
+		$('#listMenuItem').addClass('hidden');
+}
+</script>
+</head>
+ <body>
+ 
+<div class="content">
+		<div class="header" id="header"> 
+			<div class="headerContent" id="headerContent"> 
+				<div class="listMenuitem" id="listMenuitem">
+					<a class="menuItem" onClick="javascript:scrolltotop();" href="javascript:scrolltotop()" ><i class="fa fa-arrow-up"></i>&nbsp; Top</a> 
+					<a class="menuItem" href="lmsecurite2.html"><i class="fa fa-home fa-fw"></i>&nbsp; Accueil</a> 
+					<a class="menuItem" href="contact.htm"><i class="fa fa-envelope"></i>&nbsp; Contacts/Devis</a> 
+				</div>
+			</div>
+		</div>
+		
+		<div class="menu">
+			<button class="buttonMenu" type="button" OnClick="toggleDisplayMenu();"><i class="fa fa-align-justify fa-fw"></i></button>
+				<!--div class="menu"--> 
+				<div class="list-group hidden" id="listMenuItem">
+				  <div class="fondVert">
+					  <div class="fond">
+					  <a class="list-group-item fondVert" href="equipement%20%20urbain.htm"><i class="fa fa-bus fa-fw"></i>&nbsp; Equipement Urbain</a>
+						  <div class="list-group-item sub-item">
+							  <a  href="abris%20%20bus.htm">&nbsp; Abris bus</a>
+							  <a  href="abris%20%20et%20%20range%20%202%20%20roues.htm">&nbsp; Abris  2  roues</a>
+							  <a  href="affichage%20%20lumineux.htm">&nbsp; Affichage  lumineux</a>
+							<a  href="arceaux%20%20de%20%20protection.htm" target="contentIframe">Arceaux</a>
+							<a  href="banc%20%20de%20%20ville.htm">Bancs</a> 
+							<a  href="barrieres%20%20de%20%20ville.htm">Barrières</a> 
+							<a  href="bornes.htm">Bornes</a>
+							<a  href="corbeille%20%20de%20%20ville.htm">Corbeilles</a> 
+							<a  href="jardiniere%20%20de%20%20ville.htm">fleurissement</a>
+							<a  href="miroirs.htm">Miroirs</a>
+							<a  href="pavoisement%20%20drapeau.htm">Pavoisement</a>
+							<a  href="portique.htm">Portiques</a>
+							<a  href="poteaux%20%20de%20%20ville.htm">Poteaux</a>
+							<a  href="affichage%20%20urbain%20%20vitrines.htm">Vitrines</a>
+						</div>
+					</div>
+				</div>
+			
+				<div class="fondBleu">		
+					<div class="fond">
+					  <a class="list-group-item fondBleu" href="identification%20%20balisage%20%20condamnation%20%20signal%C3%A9tique%20%20imprimantes.htm"><i class="fa fa-print fafw"></i>&nbsp; Identification Brady</a> 
+					
+						<div class="list-group-item sub-item">  
+							<a href="securite%20%20et%20%20solutions%20%20pour%20%20entreprises.htm">Balisage , guidage</a>
+							<a href="condamnation%20%20consignation.htm">Condamnation ,&nbsp;consignation</a>
+							<a href="identification%20%20signalétique%20%20pour%20%20laboratoire.htm">Identification&nbsp; laboratoire</a>
+							<a href="imprimante%20%20brady.htm">Imprimantes&nbsp; BRADY</a>
+							<a href="identification%20%20marqueurs%20%20de%20%20tuyauterie.htm">Marqueurs&nbsp; de&nbsp; tuyauterie</a>
+							<a href="identification%20%20et%20%20signalisation%20%20photoluminescente.htm">Signalisation photoluminescente</a></table>  
+						</div> 
+					</div>
+				</div>
+				
+				<div class="fondBleuGris">
+					<div class="fond">
+					<a class="list-group-item fondBleuGris" href="protection%20,%20secours%20,%20securite.htm"><i class="fa fa-medkit fa-fw"></i>&nbsp; Protection sécurité</a>
+					  <div class="list-group-item sub-item">  
+						<a href="balisage%20%20des%20%20vehicules.htm">Balisage&nbsp;  des&nbsp; véhicules</a>
+						<a href="equipements%20%20routiers.htm">Équipements&nbsp; routiers</a>
+						<a href="radar%20%20cinémomtre%20%20repressif.htm">Radar cinémomtre&nbsp; répressif</a>
+						<a href="radar%20%20pedagogique%20%20préventif%20%20lumineux%20%20de%20%20vitesse.htm">Radar pédagogique&nbsp; préventif</a>
+						<a href="signalisation%20%20lumineuse%20%20des%20%20vehicules.htm">Signalisation&nbsp; lumineuse</a>
+						<a href="signalisation%20%20des%20%20vehicules%20%20de%20%20police%20%20municipale.htm">Signalisation&nbsp; police&nbsp;  municipale</a>
+						<a href="signalisation%20%20des%20%20vehicules%20%20de%20%20pompiers.htm">Signalisation&nbsp; pompiers</a>
+						</div>
+					</div>			
+				</div>
+				
+				<div class="fondOrange">
+					<div class="fond">	
+					<a class="list-group-item fondOrange" href="signalisation%20%20des%20%20vehicules.htm"><i class="fa fa-exclamation-triangle fa-fw"></i>&nbsp; Signalisation</a>
+					
+						<div class="list-group-item sub-item">  	
+							<a href="balisage%20%20des%20%20vehiculeshtm">Balisage&nbsp;  des&nbsp; véhicules</a>
+							<a href="equipements%20%20routiershtm">Équipements&nbsp; routiers</a>
+							<a href="radar%20%20cinémomtre%20%20repressifhtm">Radar cinémomtre&nbsp; répressif</a>
+							<a href="radar%20%20pedagogique%20%20préventif%20%20lumineux%20%20de%20%20vitessehtm">Radar pédagogique&nbsp; préventif</a>
+							<a href="signalisation%20%20lumineuse%20%20des%20%20vehiculeshtm">Signalisation&nbsp; lumineuse</a>
+							<a href="signalisation%20%20des%20%20vehicules%20%20de%20%20police%20%20municipalehtm">Signalisation&nbsp; police&nbsp;  municipale</a>
+							<a href="signalisation%20%20des%20%20vehicules%20%20de%20%20pompiershtm">Signalisation&nbsp; pompiers</a>
+						</div>  
+					</div>
+				 </div> 
+				</div>
+
+				<!--/div-->
+		</div>
+		
+				<iframe class="centerNav" name="contentIframe" src="lmsecurite2.html" frameborder="0" id="contentIframe" scrolling="no" onload="resizeIframe(this);">
+</div>
+  </body>
+ </html>
