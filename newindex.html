@@ -44,10 +44,7 @@ font-size:18px;
 
 .content{
 height:100%;
-width:1100px;
-margin-left:auto;
-margin-right:auto;
-margin-top:150px;
+margin-top:80px;
 z-index:1;
 }
 
@@ -58,7 +55,7 @@ height:100%;
 }
 
 .header{
-height:100px;
+height:50px;
 width:100%;
 background-color:yellow;
 position: fixed;
@@ -71,6 +68,9 @@ transition: height 500ms, background 500ms, font-size 500ms;
 z-index:10;
 }
 
+.menu{
+	margin-right:20px;
+}
 
 @media screen and (max-device-width : 320px){
 	.content{
@@ -81,32 +81,33 @@ z-index:10;
   }
 }
 
-
-@media screen and (max-width : 768px){
+  .centerNav{
+		width:820px;
+		overflow:hidden;
+  }
+  
+@media screen and (max-width : 1060px){
   .menu{
 	display:block;
 	z-index:100;
 	width:100%;	
-	right:2px;
-	top:5px;
 	font-size:20px;
-	position:fixed;
   }
   
   .menu .buttonMenu{
 	font-size:30px;	
 	background-color:inherit;
 	border:0;
-	float:right;
-	right-50px;
 	margin:0;
 	z-index:100;
+	position:fixed;
+	right:0;
+	top:5px;
   }
   
    .menu .list-group{
-	float:right;
-	position: absolute;
 	margin-right: 50px;
+	margin-bottom:50px;
   }
   
   .menuItem{
@@ -127,7 +128,6 @@ z-index:10;
   }
   
   .centerNav{
-		width:100%;
 		overflow:scroll;
   }
   
@@ -136,12 +136,12 @@ z-index:10;
   }
   
   .sub-item{
-	display:none!important;;
+	
   }
   
 }
 
-@media screen and (min-width : 768px){
+@media screen and (min-width : 1060px){
 	.header{
 	font-size:20px;
 	}
@@ -149,15 +149,20 @@ z-index:10;
 	margin-right:8%;
 	
   }
-  .headerContent{
-	background-size: 30% 70% !important;
+  .centerNav{
+		margin-left:auto;
+		margin-right:auto;
   }
+  .headerContent{
+	background-size: 40% 90% !important;
+  }
+  
   .listMenuitem{
-	margin-left:15%;
+	margin-left:25%;
   }	
   
    .menu{
-	width:200px;
+	width:400px;
 	font-size:15px;
    }
   
@@ -169,12 +174,17 @@ z-index:10;
 	display:none;
   }
   
-  .centerNav{
-		width:620px;
-  }
+  	.content{
+		width:100%;
+		}
+		
+	.menu{
+	width:200px;
+	font-size:15px;
+   }
 }
 
-@media screen and (max-width : 900px){
+@media screen and (max-width : 1250px){
 
   .list-group-item{
 		padding: 10px 15px;
@@ -186,17 +196,18 @@ z-index:10;
 	}
 }
 
-@media screen and (min-width : 910px)
+@media screen and (min-width : 1250px)
 {
   .header
   {
     font-size:20px;
   }
   
-  .centerNav{
-		width:820px;
-		overflow:hidden;
-  }
+   .menu{
+	width:400px;
+	font-size:15px;
+   }
+
   
   .list-group-item{
 		padding: 10px 15px;
@@ -206,6 +217,12 @@ z-index:10;
 	padding-left:40px;
 	font-size : 0.8em;
 	}
+	
+	.content{
+		width:1300px;
+		margin-left:auto;
+		margin-right:auto;
+		}
 }
 
 
@@ -217,7 +234,7 @@ background-position: 0 50%;
 width:100%;
 height:100%;
 margin: 0 auto;
-max-width:1100px;
+max-width:1300px;
 margin-top:auto;
 }
 
