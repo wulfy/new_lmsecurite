@@ -43,8 +43,8 @@ font-size:18px;
 }
 
 .content{
-height:100%;
-margin-top:80px;
+height:90%;
+margin-top:70px;
 z-index:1;
 }
 
@@ -52,6 +52,8 @@ z-index:1;
 border:0;
 margin-left:10px;
 height:100%;
+overflow-y:scroll;
+overflow-x:hidden;
 }
 
 .header{
@@ -72,6 +74,11 @@ z-index:10;
 	margin-right:20px;
 }
 
+  .sub-item{
+	padding-left:40px;
+	font-size : 1em;
+	}
+
 @media screen and (max-device-width : 320px){
 	.content{
 		width:320px !important;
@@ -86,7 +93,7 @@ z-index:10;
 		overflow:hidden;
   }
   
-@media screen and (max-width : 1060px){
+@media screen and (max-width : 1000px){
   .menu{
 	display:block;
 	z-index:100;
@@ -148,7 +155,7 @@ z-index:10;
   
 }
 
-@media screen and (min-width : 1060px){
+@media screen and (min-width : 1000px){
 	.header{
 	font-size:20px;
 	}
@@ -157,7 +164,7 @@ z-index:10;
 	
   }
   .centerNav{
-		margin-left:220px;
+		margin-left:10px;
   }
   .headerContent{
 	background-size: 40% 90% !important;
@@ -168,13 +175,17 @@ z-index:10;
   }	
   
    .menu{
-	width:400px;
-	font-size:15px;
-	position:fixed;
+	width:180px;
+	font-size:12px;
+	
    }
   
    .menu .list-group{
 	display:block;
+  }
+  
+  .list-group-item:first-child{
+		padding: 10px 10px;
   }
   
   .buttonMenu{
@@ -183,12 +194,11 @@ z-index:10;
   
   	.content{
 		width:100%;
+		height:1000px;
 	}
-		
-	.menu{
-	width:200px;
-	font-size:15px;
-   }
+		 .sub-item{
+	padding-left:10px;
+	}
 }
 
 @media screen and (max-width : 1250px){
@@ -197,10 +207,6 @@ z-index:10;
 		padding: 10px 15px;
   }
   
-  .sub-item{
-	padding-left:40px;
-	font-size : 0.8em;
-	}
 }
 
 @media screen and (min-width : 1250px)
@@ -210,9 +216,14 @@ z-index:10;
     font-size:20px;
   }
   
+  .list-group-item:first-child {
+	padding: 10px 15px;
+	}
+
    .menu{
 	width:400px;
 	font-size:15px;
+	position:fixed;
    }
 
    .centerNav{
@@ -225,13 +236,14 @@ z-index:10;
   
   .sub-item{
 	padding-left:40px;
-	font-size : 0.8em;
+	font-size : 1em;
 	}
 	
 	.content{
 		width:1300px;
 		margin-left:auto;
 		margin-right:auto;
+		height:90%;
 		}
 }
 
@@ -265,7 +277,8 @@ color:white !important;
 .list-group-item:first-child {
 border-top-right-radius: 4px;
 border-top-left-radius: 4px;
-padding: 10px 15px;
+text-transform:uppercase;
+font-weight:bold;
 }
 .list-group-item {
 position: relative;
@@ -319,7 +332,7 @@ function resizeIframe(obj) {
 obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 //obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
 }
-
+/*
 $(window).scroll(function(){
     if($(document).scrollTop() > 100) {
         $('#header').addClass('small');
@@ -329,7 +342,7 @@ $(window).scroll(function(){
         $('#header').removeClass('small');
 		$('#listMenuitem').removeClass('small');
     }
-});
+});*/
 
 function scrolltotop() {
 	window.scrollTo(0,0);
@@ -409,13 +422,20 @@ function toggleDisplayMenu(){
 					<div class="fond">
 					<a class="list-group-item fondBleuGris" href="protection%20,%20secours%20,%20securite.htm"><i class="fa fa-medkit fa-fw"></i>&nbsp; Protection sécurité</a>
 					  <div class="list-group-item sub-item">  
-						<a href="balisage%20%20des%20%20vehicules.htm">Balisage&nbsp;  des&nbsp; véhicules</a>
-						<a href="equipements%20%20routiers.htm">Équipements&nbsp; routiers</a>
-						<a href="radar%20%20cinémomtre%20%20repressif.htm">Radar cinémomtre&nbsp; répressif</a>
-						<a href="radar%20%20pedagogique%20%20préventif%20%20lumineux%20%20de%20%20vitesse.htm">Radar pédagogique&nbsp; préventif</a>
-						<a href="signalisation%20%20lumineuse%20%20des%20%20vehicules.htm">Signalisation&nbsp; lumineuse</a>
-						<a href="signalisation%20%20des%20%20vehicules%20%20de%20%20police%20%20municipale.htm">Signalisation&nbsp; police&nbsp;  municipale</a>
-						<a href="signalisation%20%20des%20%20vehicules%20%20de%20%20pompiers.htm">Signalisation&nbsp; pompiers</a>
+						<a href="armoire%20%20rangement%20%20rayonnage%20%20stockage.htm">		Armoires ,&nbsp; stockage</a>
+						<a href="armoires%20%20coffres%20%20forts.htm">	Armoires&nbsp; fortes</a>
+						<a href="armoires%20de%20securite.htm">	de&nbsp; sécurité</a>
+						<a href="armoires%20%20sechantes%20%20seche%20%20chaussure.htm">Armoires&nbsp; séchantes,</a>
+						<a href="vestiaire.htm">vestiaires</a>
+						<a href="ethylotest.htm">Ehylotest</a>	
+						<a href="hygiene%20%20seches%20%20mains.htm">Hygiène</a>
+						<a href="lampes%20%20projecteurs%20%20torches%20%20valises%20%20de%20%20sécurité.htm">
+						Lampes</a>
+						<a href="securite%20%20et%20%20solutions%20%20pour%20%20entreprises.htm">
+						Solutions&nbsp;sécurité&nbsp; entreprises</a>
+						<a href="tapis%20%20revetement%20%20de%20%20sol%20%20technique.htm">
+						Tapis&nbsp; et&nbsp; Revêtement&nbsp; de&nbsp; sols 
+						</a>
 						</div>
 					</div>			
 				</div>
@@ -440,7 +460,7 @@ function toggleDisplayMenu(){
 				<!--/div-->
 		</div>
 		
-				<iframe class="centerNav" name="contentIframe" src="lmsecurite2.html" frameborder="0" id="contentIframe" scrolling="no" onload="resizeIframe(this);">
+				<iframe class="centerNav" name="contentIframe" src="lmsecurite2.html" frameborder="0" id="contentIframe"  />
 </div>
   </body>
  </html>
